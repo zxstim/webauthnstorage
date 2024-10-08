@@ -24,7 +24,9 @@ export async function createOrThrow(name: string, data: Uint8Array): Promise<Uin
         { type: "public-key", alg: -257 }
       ],
       authenticatorSelection: {
-        authenticatorAttachment: "platform"
+        authenticatorAttachment: "platform",
+        residentKey: "required",
+        requireResidentKey: true
       }
     }
   }) as any
